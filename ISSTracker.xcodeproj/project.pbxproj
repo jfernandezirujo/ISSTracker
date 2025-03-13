@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		3945CCB22D81FF20005B6DE2 /*  ISSPositionDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCB12D81FF20005B6DE2 /*  ISSPositionDomainError.swift */; };
 		3945CCB52D82098A005B6DE2 /* ISSPositionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCB42D82098A005B6DE2 /* ISSPositionMapper.swift */; };
-		3945CCBC2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCBA2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld */; };
 		3945CCCA2D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCC82D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift */; };
 		3945CCCB2D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCC92D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift */; };
 		3945CCCD2D8329ED005B6DE2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCCC2D8329ED005B6DE2 /* CoreDataManager.swift */; };
+		3945CCD72D835C7B005B6DE2 /* LastPositionModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCD52D835C7B005B6DE2 /* LastPositionModel.xcdatamodeld */; };
 		39ED0E762B840DAB00D387A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39ED0E752B840DAB00D387A6 /* Assets.xcassets */; };
 		39ED0E792B840DC100D387A6 /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E782B840DC100D387A6 /* DataConstants.swift */; };
 		39ED0E7D2B840DD500D387A6 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E7C2B840DD500D387A6 /* DependencyContainer.swift */; };
@@ -40,10 +40,10 @@
 /* Begin PBXFileReference section */
 		3945CCB12D81FF20005B6DE2 /*  ISSPositionDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ISSPositionDomainError.swift"; sourceTree = "<group>"; };
 		3945CCB42D82098A005B6DE2 /* ISSPositionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSPositionMapper.swift; sourceTree = "<group>"; };
-		3945CCBB2D831F99005B6DE2 /* LastPositionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LastPositionModel.xcdatamodel; sourceTree = "<group>"; };
 		3945CCC82D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastPositionModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3945CCC92D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastPositionModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3945CCCC2D8329ED005B6DE2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3945CCD62D835C7B005B6DE2 /* LastPositionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LastPositionModel.xcdatamodel; sourceTree = "<group>"; };
 		394958EB2B84D3D600741BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		39ED0E5B2B840D7D00D387A6 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39ED0E752B840DAB00D387A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,9 +100,9 @@
 		3945CCB62D831364005B6DE2 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3945CCD52D835C7B005B6DE2 /* LastPositionModel.xcdatamodeld */,
 				3945CCC82D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift */,
 				3945CCC92D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift */,
-				3945CCBA2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld */,
 				3945CCCC2D8329ED005B6DE2 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
@@ -395,7 +395,6 @@
 				3945CCCD2D8329ED005B6DE2 /* CoreDataManager.swift in Sources */,
 				39ED0EB22B840FA300D387A6 /* ButtonsView.swift in Sources */,
 				39ED0E9C2B840F6600D387A6 /* GetPositionCoreDataUseCase.swift in Sources */,
-				3945CCBC2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld in Sources */,
 				39ED0E9A2B840F6600D387A6 /* GetPositionAPIClientUseCase.swift in Sources */,
 				3945CCB22D81FF20005B6DE2 /*  ISSPositionDomainError.swift in Sources */,
 				39ED0E9B2B840F6600D387A6 /* SavePositionCoreDataUseCase.swift in Sources */,
@@ -407,6 +406,7 @@
 				39ED0EA52B840F8600D387A6 /* InitialView.swift in Sources */,
 				39ED0E822B840DDB00D387A6 /* SavePositionCoreDataRepository.swift in Sources */,
 				39ED0EB82B840FAE00D387A6 /* ISSPositionViewModel.swift in Sources */,
+				3945CCD72D835C7B005B6DE2 /* LastPositionModel.xcdatamodeld in Sources */,
 				39ED0E832B840DDB00D387A6 /* GetPositionCoreDataRepository.swift in Sources */,
 				39ED0EA22B840F8200D387A6 /* ISSPositionModel.swift in Sources */,
 				39ED0E842B840DDB00D387A6 /* GetPositionAPIClientRepository.swift in Sources */,
@@ -627,14 +627,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3945CCBA2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld */ = {
+		3945CCD52D835C7B005B6DE2 /* LastPositionModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3945CCBB2D831F99005B6DE2 /* LastPositionModel.xcdatamodel */,
+				3945CCD62D835C7B005B6DE2 /* LastPositionModel.xcdatamodel */,
 			);
-			currentVersion = 3945CCBB2D831F99005B6DE2 /* LastPositionModel.xcdatamodel */;
+			currentVersion = 3945CCD62D835C7B005B6DE2 /* LastPositionModel.xcdatamodel */;
 			name = LastPositionModel.xcdatamodeld;
-			path = /Users/julieta.fi/Desktop/ISSTraker/ISSTracker/Data/CoreData/LastPositionModel.xcdatamodeld;
+			path = /Users/julieta.fi/Desktop/ISSTracker/ISSTracker/Data/CoreData/LastPositionModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
