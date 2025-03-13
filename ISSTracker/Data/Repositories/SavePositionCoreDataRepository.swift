@@ -8,36 +8,44 @@
 import Combine
 import CoreData
 
-// MARK: - protocol
-protocol SavePositionCoreDataRepositoryProtocol {
-  func savePositionInCoreData(positionData: ISSPositionDTO) -> AnyPublisher<Void, ISSPositionDomainError>
-}
-
-// MARK: - SavePositionCoreDataRepository
 class SavePositionCoreDataRepository: SavePositionCoreDataRepositoryProtocol {
-  
+
   // MARK: - Methods
-  func savePositionInCoreData(positionData: ISSPositionDTO) -> AnyPublisher<Void, ISSPositionDomainError> {
-    return Future<Void, ISSPositionDomainError> { promise in
-      let context: NSManagedObjectContext = CoreDataManager.shared.mainContext
-      let request: NSFetchRequest<LastPosition> = LastPosition.fetchRequest()
-      
+  func savePositionInCoreData(positionData: ISSPositionDTO) -> AnyPublisher<Void, ISSPositionDataError> {
+    return Future<Void, ISSPositionDataError> { promise in
+      let context: NSManagedObjectContext = CoreDataManager.shared.context
+      let request: NSFetchRequest<LastPositionModel> = LastPositionModel.fetchRequest()
+      request.fetchLimit = DataConstants.fetchLimit
       do {
-        let result: [LastPosition] = try context.fetch(request)
-        if let lastPosition: LastPosition = result.first {
-          lastPosition.latitude = positionData.issPosition.latitude
-          lastPosition.longitude = positionData.issPosition.longitude
-        } else {
-          let issPosition: LastPosition = LastPosition(context: context)
-          issPosition.latitude = positionData.issPosition.latitude
-          issPosition.longitude = positionData.issPosition.longitude
+        let existingPosition: [LastPositionModel] = try context.fetch(request)
+
+        existingPosition.forEach { position in
+          position.isCurrent = false
         }
+
+        let issPosition: LastPositionModel
+
+        if let lastPosition: LastPositionModel = existingPosition.first {
+          issPosition = lastPosition
+        } else {
+          issPosition = LastPositionModel(context: context)
+        }
+
+        issPosition.latitude = positionData.issPosition.latitude
+        issPosition.longitude = positionData.issPosition.longitude
+        issPosition.isCurrent = true
+
         try context.save()
         promise(.success(()))
       } catch {
-        promise(.failure(.generic))
+        promise(.failure(.coreDataSaveError))
       }
     }
     .eraseToAnyPublisher()
   }
+}
+
+// MARK: - protocol
+protocol SavePositionCoreDataRepositoryProtocol {
+  func savePositionInCoreData(positionData: ISSPositionDTO) -> AnyPublisher<Void, ISSPositionDataError>
 }

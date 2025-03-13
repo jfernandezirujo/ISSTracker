@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39ED0E6B2B840D7E00D387A6 /* ISSTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E692B840D7E00D387A6 /* ISSTracker.xcdatamodeld */; };
+		3945CCB22D81FF20005B6DE2 /*  ISSPositionDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCB12D81FF20005B6DE2 /*  ISSPositionDomainError.swift */; };
+		3945CCB52D82098A005B6DE2 /* ISSPositionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCB42D82098A005B6DE2 /* ISSPositionMapper.swift */; };
+		3945CCBC2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCBA2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld */; };
+		3945CCCA2D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCC82D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift */; };
+		3945CCCB2D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCC92D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift */; };
+		3945CCCD2D8329ED005B6DE2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945CCCC2D8329ED005B6DE2 /* CoreDataManager.swift */; };
 		39ED0E762B840DAB00D387A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39ED0E752B840DAB00D387A6 /* Assets.xcassets */; };
 		39ED0E792B840DC100D387A6 /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E782B840DC100D387A6 /* DataConstants.swift */; };
-		39ED0E7D2B840DD500D387A6 /* DependencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E7C2B840DD500D387A6 /* DependencyHelper.swift */; };
+		39ED0E7D2B840DD500D387A6 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E7C2B840DD500D387A6 /* DependencyContainer.swift */; };
 		39ED0E822B840DDB00D387A6 /* SavePositionCoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E7F2B840DDB00D387A6 /* SavePositionCoreDataRepository.swift */; };
 		39ED0E832B840DDB00D387A6 /* GetPositionCoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E802B840DDB00D387A6 /* GetPositionCoreDataRepository.swift */; };
 		39ED0E842B840DDB00D387A6 /* GetPositionAPIClientRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E812B840DDB00D387A6 /* GetPositionAPIClientRepository.swift */; };
-		39ED0E882B840E6B00D387A6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E872B840E6B00D387A6 /* CoreDataManager.swift */; };
-		39ED0E8C2B840EA500D387A6 /* Position+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E8B2B840EA500D387A6 /* Position+CoreDataProperties.swift */; };
-		39ED0E8F2B840F4D00D387A6 /* ISSPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E8E2B840F4D00D387A6 /* ISSPosition.swift */; };
-		39ED0E922B840F5C00D387A6 /* ISSPositionDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E912B840F5C00D387A6 /* ISSPositionDomainError.swift */; };
+		39ED0E922B840F5C00D387A6 /* ISSPositionDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E912B840F5C00D387A6 /* ISSPositionDataError.swift */; };
 		39ED0E952B840F6000D387A6 /* ISSPositionUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E942B840F6000D387A6 /* ISSPositionUseCaseProvider.swift */; };
 		39ED0E9A2B840F6600D387A6 /* GetPositionAPIClientUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E972B840F6600D387A6 /* GetPositionAPIClientUseCase.swift */; };
 		39ED0E9B2B840F6600D387A6 /* SavePositionCoreDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E982B840F6600D387A6 /* SavePositionCoreDataUseCase.swift */; };
 		39ED0E9C2B840F6600D387A6 /* GetPositionCoreDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E992B840F6600D387A6 /* GetPositionCoreDataUseCase.swift */; };
 		39ED0E9F2B840F7D00D387A6 /* PresentationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0E9E2B840F7D00D387A6 /* PresentationConstants.swift */; };
-		39ED0EA22B840F8200D387A6 /* CoordinatesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0EA12B840F8200D387A6 /* CoordinatesDTO.swift */; };
+		39ED0EA22B840F8200D387A6 /* ISSPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0EA12B840F8200D387A6 /* ISSPositionModel.swift */; };
 		39ED0EA52B840F8600D387A6 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0EA42B840F8600D387A6 /* InitialView.swift */; };
 		39ED0EA82B840F9200D387A6 /* ISS_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0EA72B840F9200D387A6 /* ISS_trackerApp.swift */; };
 		39ED0EAB2B840F9F00D387A6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED0EAA2B840F9F00D387A6 /* SplashView.swift */; };
@@ -36,25 +38,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3945CCB12D81FF20005B6DE2 /*  ISSPositionDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ISSPositionDomainError.swift"; sourceTree = "<group>"; };
+		3945CCB42D82098A005B6DE2 /* ISSPositionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSPositionMapper.swift; sourceTree = "<group>"; };
+		3945CCBB2D831F99005B6DE2 /* LastPositionModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LastPositionModel.xcdatamodel; sourceTree = "<group>"; };
+		3945CCC82D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastPositionModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3945CCC92D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastPositionModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3945CCCC2D8329ED005B6DE2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		394958EB2B84D3D600741BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		39ED0E5B2B840D7D00D387A6 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		39ED0E6A2B840D7E00D387A6 /* ISSTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ISSTracker.xcdatamodel; sourceTree = "<group>"; };
 		39ED0E752B840DAB00D387A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39ED0E782B840DC100D387A6 /* DataConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
-		39ED0E7C2B840DD500D387A6 /* DependencyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyHelper.swift; sourceTree = "<group>"; };
+		39ED0E7C2B840DD500D387A6 /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		39ED0E7F2B840DDB00D387A6 /* SavePositionCoreDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavePositionCoreDataRepository.swift; sourceTree = "<group>"; };
 		39ED0E802B840DDB00D387A6 /* GetPositionCoreDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPositionCoreDataRepository.swift; sourceTree = "<group>"; };
 		39ED0E812B840DDB00D387A6 /* GetPositionAPIClientRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPositionAPIClientRepository.swift; sourceTree = "<group>"; };
-		39ED0E872B840E6B00D387A6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		39ED0E8B2B840EA500D387A6 /* Position+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Position+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		39ED0E8E2B840F4D00D387A6 /* ISSPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSPosition.swift; sourceTree = "<group>"; };
-		39ED0E912B840F5C00D387A6 /* ISSPositionDomainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSPositionDomainError.swift; sourceTree = "<group>"; };
+		39ED0E912B840F5C00D387A6 /* ISSPositionDataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSPositionDataError.swift; sourceTree = "<group>"; };
 		39ED0E942B840F6000D387A6 /* ISSPositionUseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSPositionUseCaseProvider.swift; sourceTree = "<group>"; };
 		39ED0E972B840F6600D387A6 /* GetPositionAPIClientUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPositionAPIClientUseCase.swift; sourceTree = "<group>"; };
 		39ED0E982B840F6600D387A6 /* SavePositionCoreDataUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavePositionCoreDataUseCase.swift; sourceTree = "<group>"; };
 		39ED0E992B840F6600D387A6 /* GetPositionCoreDataUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPositionCoreDataUseCase.swift; sourceTree = "<group>"; };
 		39ED0E9E2B840F7D00D387A6 /* PresentationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationConstants.swift; sourceTree = "<group>"; };
-		39ED0EA12B840F8200D387A6 /* CoordinatesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatesDTO.swift; sourceTree = "<group>"; };
+		39ED0EA12B840F8200D387A6 /* ISSPositionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSPositionModel.swift; sourceTree = "<group>"; };
 		39ED0EA42B840F8600D387A6 /* InitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		39ED0EA72B840F9200D387A6 /* ISS_trackerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISS_trackerApp.swift; sourceTree = "<group>"; };
 		39ED0EAA2B840F9F00D387A6 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3945CCB02D81FF0A005B6DE2 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				3945CCB12D81FF20005B6DE2 /*  ISSPositionDomainError.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		3945CCB32D82094C005B6DE2 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				3945CCB42D82098A005B6DE2 /* ISSPositionMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		3945CCB62D831364005B6DE2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3945CCC82D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift */,
+				3945CCC92D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift */,
+				3945CCBA2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld */,
+				3945CCCC2D8329ED005B6DE2 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3945CCCE2D8345C3005B6DE2 /* Composition Root */ = {
+			isa = PBXGroup;
+			children = (
+				39ED0E932B840F6000D387A6 /* UseCaseProvider */,
+				39ED0EA62B840F9200D387A6 /* Main */,
+				39ED0E7B2B840DD500D387A6 /*  Dependencies */,
+			);
+			path = "Composition Root";
+			sourceTree = "<group>";
+		};
 		39ED0E522B840D7D00D387A6 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				394958EB2B84D3D600741BE1 /* Info.plist */,
+				3945CCCE2D8345C3005B6DE2 /* Composition Root */,
 				39ED0E732B840D9E00D387A6 /* Presentation */,
 				39ED0E722B840D9800D387A6 /* Domain */,
 				39ED0E712B840D9200D387A6 /* Data */,
@@ -107,10 +149,10 @@
 		39ED0E712B840D9200D387A6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				39ED0E862B840E5800D387A6 /* CoreData */,
+				3945CCB62D831364005B6DE2 /* CoreData */,
+				39ED0E902B840F5C00D387A6 /* Enum */,
 				39ED0E7E2B840DDB00D387A6 /* Repositories */,
-				39ED0E7B2B840DD500D387A6 /* Helper */,
-				39ED0E7A2B840DCA00D387A6 /* Entitites */,
+				39ED0E7A2B840DCA00D387A6 /* DTO */,
 				39ED0E772B840DC100D387A6 /* Constants */,
 				39ED0E742B840DAB00D387A6 /* Assets */,
 			);
@@ -120,10 +162,9 @@
 		39ED0E722B840D9800D387A6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3945CCB32D82094C005B6DE2 /* Mapper */,
+				3945CCB02D81FF0A005B6DE2 /* Enum */,
 				39ED0E962B840F6600D387A6 /* UseCases */,
-				39ED0E932B840F6000D387A6 /* UseCaseProvider */,
-				39ED0E902B840F5C00D387A6 /* Enum */,
-				39ED0E8D2B840F4D00D387A6 /* Entitites */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -135,9 +176,8 @@
 				39ED0EB32B840FA900D387A6 /* View */,
 				39ED0EAC2B840FA300D387A6 /* Subviews */,
 				39ED0EA92B840F9F00D387A6 /* Splash */,
-				39ED0EA62B840F9200D387A6 /* Main */,
 				39ED0EA32B840F8600D387A6 /* InitialView */,
-				39ED0EA02B840F8200D387A6 /* CoordinatesDTO */,
+				39ED0EA02B840F8200D387A6 /* Model */,
 				39ED0E9D2B840F7D00D387A6 /* Constants */,
 			);
 			path = Presentation;
@@ -159,20 +199,20 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		39ED0E7A2B840DCA00D387A6 /* Entitites */ = {
+		39ED0E7A2B840DCA00D387A6 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				39ED0EB92B84113F00D387A6 /* ISSPositionDTO.swift */,
 			);
-			path = Entitites;
+			path = DTO;
 			sourceTree = "<group>";
 		};
-		39ED0E7B2B840DD500D387A6 /* Helper */ = {
+		39ED0E7B2B840DD500D387A6 /*  Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				39ED0E7C2B840DD500D387A6 /* DependencyHelper.swift */,
+				39ED0E7C2B840DD500D387A6 /* DependencyContainer.swift */,
 			);
-			path = Helper;
+			path = " Dependencies";
 			sourceTree = "<group>";
 		};
 		39ED0E7E2B840DDB00D387A6 /* Repositories */ = {
@@ -185,28 +225,10 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		39ED0E862B840E5800D387A6 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				39ED0E692B840D7E00D387A6 /* ISSTracker.xcdatamodeld */,
-				39ED0E872B840E6B00D387A6 /* CoreDataManager.swift */,
-				39ED0E8B2B840EA500D387A6 /* Position+CoreDataProperties.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		39ED0E8D2B840F4D00D387A6 /* Entitites */ = {
-			isa = PBXGroup;
-			children = (
-				39ED0E8E2B840F4D00D387A6 /* ISSPosition.swift */,
-			);
-			path = Entitites;
-			sourceTree = "<group>";
-		};
 		39ED0E902B840F5C00D387A6 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				39ED0E912B840F5C00D387A6 /* ISSPositionDomainError.swift */,
+				39ED0E912B840F5C00D387A6 /* ISSPositionDataError.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -237,12 +259,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		39ED0EA02B840F8200D387A6 /* CoordinatesDTO */ = {
+		39ED0EA02B840F8200D387A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				39ED0EA12B840F8200D387A6 /* CoordinatesDTO.swift */,
+				39ED0EA12B840F8200D387A6 /* ISSPositionModel.swift */,
 			);
-			path = CoordinatesDTO;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		39ED0EA32B840F8600D387A6 /* InitialView */ = {
@@ -364,30 +386,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39ED0E8C2B840EA500D387A6 /* Position+CoreDataProperties.swift in Sources */,
 				39ED0EB12B840FA300D387A6 /* LabelsView.swift in Sources */,
 				39ED0EAB2B840F9F00D387A6 /* SplashView.swift in Sources */,
 				39ED0EBA2B84113F00D387A6 /* ISSPositionDTO.swift in Sources */,
 				39ED0EA82B840F9200D387A6 /* ISS_trackerApp.swift in Sources */,
 				39ED0E792B840DC100D387A6 /* DataConstants.swift in Sources */,
 				39ED0E952B840F6000D387A6 /* ISSPositionUseCaseProvider.swift in Sources */,
+				3945CCCD2D8329ED005B6DE2 /* CoreDataManager.swift in Sources */,
 				39ED0EB22B840FA300D387A6 /* ButtonsView.swift in Sources */,
 				39ED0E9C2B840F6600D387A6 /* GetPositionCoreDataUseCase.swift in Sources */,
+				3945CCBC2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld in Sources */,
 				39ED0E9A2B840F6600D387A6 /* GetPositionAPIClientUseCase.swift in Sources */,
+				3945CCB22D81FF20005B6DE2 /*  ISSPositionDomainError.swift in Sources */,
 				39ED0E9B2B840F6600D387A6 /* SavePositionCoreDataUseCase.swift in Sources */,
 				39ED0EB02B840FA300D387A6 /* MapView.swift in Sources */,
-				39ED0E7D2B840DD500D387A6 /* DependencyHelper.swift in Sources */,
-				39ED0E8F2B840F4D00D387A6 /* ISSPosition.swift in Sources */,
+				39ED0E7D2B840DD500D387A6 /* DependencyContainer.swift in Sources */,
 				39ED0E9F2B840F7D00D387A6 /* PresentationConstants.swift in Sources */,
-				39ED0E6B2B840D7E00D387A6 /* ISSTracker.xcdatamodeld in Sources */,
-				39ED0E922B840F5C00D387A6 /* ISSPositionDomainError.swift in Sources */,
+				3945CCB52D82098A005B6DE2 /* ISSPositionMapper.swift in Sources */,
+				39ED0E922B840F5C00D387A6 /* ISSPositionDataError.swift in Sources */,
 				39ED0EA52B840F8600D387A6 /* InitialView.swift in Sources */,
 				39ED0E822B840DDB00D387A6 /* SavePositionCoreDataRepository.swift in Sources */,
 				39ED0EB82B840FAE00D387A6 /* ISSPositionViewModel.swift in Sources */,
 				39ED0E832B840DDB00D387A6 /* GetPositionCoreDataRepository.swift in Sources */,
-				39ED0EA22B840F8200D387A6 /* CoordinatesDTO.swift in Sources */,
+				39ED0EA22B840F8200D387A6 /* ISSPositionModel.swift in Sources */,
 				39ED0E842B840DDB00D387A6 /* GetPositionAPIClientRepository.swift in Sources */,
-				39ED0E882B840E6B00D387A6 /* CoreDataManager.swift in Sources */,
+				3945CCCA2D832834005B6DE2 /* LastPositionModel+CoreDataClass.swift in Sources */,
+				3945CCCB2D832834005B6DE2 /* LastPositionModel+CoreDataProperties.swift in Sources */,
 				39ED0EB52B840FA900D387A6 /* ISSPositionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,13 +627,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		39ED0E692B840D7E00D387A6 /* ISSTracker.xcdatamodeld */ = {
+		3945CCBA2D831F99005B6DE2 /* LastPositionModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				39ED0E6A2B840D7E00D387A6 /* ISSTracker.xcdatamodel */,
+				3945CCBB2D831F99005B6DE2 /* LastPositionModel.xcdatamodel */,
 			);
-			currentVersion = 39ED0E6A2B840D7E00D387A6 /* ISSTracker.xcdatamodel */;
-			path = ISSTracker.xcdatamodeld;
+			currentVersion = 3945CCBB2D831F99005B6DE2 /* LastPositionModel.xcdatamodel */;
+			name = LastPositionModel.xcdatamodeld;
+			path = /Users/julieta.fi/Desktop/ISSTraker/ISSTracker/Data/CoreData/LastPositionModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

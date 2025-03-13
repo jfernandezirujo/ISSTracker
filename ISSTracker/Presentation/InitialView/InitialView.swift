@@ -9,32 +9,27 @@ import SwiftUI
 import Combine
 
 struct InitialView: View {
-  
-  //MARK: - Properties
+
+  // MARK: - Properties
   typealias constants = PresentationConstants
   @State private var isSplashFinished: Bool = false
-  @EnvironmentObject private var viewModel: ISSPositionViewModel
-  
-  //MARK: - body
+
+  // MARK: - body
   var body: some View {
-    ZStack {
+    Group {
       if isSplashFinished {
         ISSPositionView()
       } else {
         SplashView()
+          .transition(.opacity)
       }
     }
     .onAppear {
-      Timer.publish(every: constants.time,
-                    on: .main,
-                    in: .common)
-        .autoconnect()
-        .sink { _ in
-          withAnimation {
-            self.isSplashFinished = true
-          }
+      DispatchQueue.main.asyncAfter(deadline: .now() + constants.timeSplash) {
+        withAnimation {
+          isSplashFinished = true
         }
-        .store(in: &viewModel.cancellables)
+      }
     }
   }
 }

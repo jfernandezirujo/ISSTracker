@@ -8,25 +8,24 @@
 import CoreData
 import Combine
 
-// MARK: - protocol
-protocol SavePositionCoreDataUseCaseProtocol {
-  func execute(positionData: ISSPositionDTO) -> AnyPublisher<Void, ISSPositionDomainError>
-}
-
-// MARK: - SavePositionCoreDataUseCase
 struct SavePositionCoreDataUseCase: SavePositionCoreDataUseCaseProtocol {
 
   // MARK: - Properties
   var repository: SavePositionCoreDataRepositoryProtocol
-  
+
   // MARK: - init
   init(repository: SavePositionCoreDataRepositoryProtocol) {
     self.repository = repository
   }
 
   // MARK: - Methods
-  func execute(positionData: ISSPositionDTO) -> AnyPublisher<Void, ISSPositionDomainError> {
-    return self.repository.savePositionInCoreData(positionData: positionData)
+  func execute(positionData: ISSPositionModel) -> AnyPublisher<Void, ISSPositionDataError> {
+    let dto: ISSPositionDTO = ISSPositionMapper.map(model: positionData)
+    return self.repository.savePositionInCoreData(positionData: dto)
   }
 }
 
+// MARK: - protocol
+protocol SavePositionCoreDataUseCaseProtocol {
+  func execute(positionData: ISSPositionModel) -> AnyPublisher<Void, ISSPositionDataError>
+}

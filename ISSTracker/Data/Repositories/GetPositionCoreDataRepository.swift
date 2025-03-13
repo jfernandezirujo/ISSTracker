@@ -8,35 +8,31 @@
 import CoreData
 import Combine
 
-// MARK: - protocol
-protocol GetPositionCoreDataRepositoryProtocol {
-  func getPositionFromCoreData() -> AnyPublisher<LastPosition?, ISSPositionDomainError>
-}
-
-// MARK: - GetPositionCoreDataRepository
 class GetPositionCoreDataRepository: GetPositionCoreDataRepositoryProtocol {
-  
+
   // MARK: - Properties
   typealias constants = DataConstants
-  
+
   // MARK: - Methods
-  func getPositionFromCoreData() -> AnyPublisher<LastPosition?, ISSPositionDomainError> {
-    let context: NSManagedObjectContext = CoreDataManager.shared.mainContext
-    let request: NSFetchRequest<LastPosition> = LastPosition.fetchRequest()
+  func getPositionFromCoreData() -> AnyPublisher<LastPositionModel?, ISSPositionDataError> {
+    let context: NSManagedObjectContext = CoreDataManager.shared.context
+    let request: NSFetchRequest<LastPositionModel> = LastPositionModel.fetchRequest()
     request.fetchLimit = constants.fetchLimit
-    
-    return Future<LastPosition?, ISSPositionDomainError> { promise in
+    request.predicate = NSPredicate(format: DataConstants.requestPredicateFormat)
+
+    return Future<LastPositionModel?, ISSPositionDataError> { promise in
       do {
-        let result: [LastPosition] = try context.fetch(request)
-        if let lastPosition: LastPosition = result.first {
-          promise(.success(lastPosition))
-        } else {
-          promise(.success(nil))
-        }
+        let lastPosition: LastPositionModel? = try context.fetch(request).first
+        promise(.success(lastPosition))
       } catch {
-        promise(.failure(.generic))
+        promise(.failure(.coreDataFetchError))
       }
     }
     .eraseToAnyPublisher()
   }
+}
+
+// MARK: - protocol
+protocol GetPositionCoreDataRepositoryProtocol {
+  func getPositionFromCoreData() -> AnyPublisher<LastPositionModel?, ISSPositionDataError>
 }

@@ -7,24 +7,23 @@
 
 import Combine
 
-// MARK: - protocol
-protocol GetPositionCoreDataUseCaseProtocol {
-  func execute() -> AnyPublisher<LastPosition?, ISSPositionDomainError>
-}
-
-// MARK: - GetPositionCoreDataUseCase
 struct GetPositionCoreDataUseCase: GetPositionCoreDataUseCaseProtocol {
-  
+
   // MARK: - Properties
   var repository: GetPositionCoreDataRepositoryProtocol
-  
+
   // MARK: - init
   init(repository: GetPositionCoreDataRepositoryProtocol) {
     self.repository = repository
   }
-  
+
   // MARK: - Methods
-  func execute() -> AnyPublisher<LastPosition?, ISSPositionDomainError> {
+  func execute() -> AnyPublisher<LastPositionModel?, ISSPositionDataError> {
     return repository.getPositionFromCoreData()
   }
+}
+
+// MARK: - protocol
+protocol GetPositionCoreDataUseCaseProtocol {
+  func execute() -> AnyPublisher<LastPositionModel?, ISSPositionDataError>
 }

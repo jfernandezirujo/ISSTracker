@@ -5,20 +5,20 @@
 //  Created by Julieta Fernandez Irujo on 18/02/2024.
 //
 
-class DependencyHelper {
-  
+class DependencyContainer {
+
   // MARK: - Methods
-  static func getPositionAPIClientUseCase() -> GetPositionAPIClientUseCaseProtocol {
+  static func makeGetPositionAPIClientUseCase() -> GetPositionAPIClientUseCaseProtocol {
     let getPositionAPIClientRepository: GetPositionAPIClientRepositoryProtocol = GetPositionAPIClientRepository()
     return GetPositionAPIClientUseCase(repository: getPositionAPIClientRepository)
   }
-  
-  static func savePositionCoreDataUseCase() -> SavePositionCoreDataUseCaseProtocol {
+
+  static func makeSavePositionCoreDataUseCase() -> SavePositionCoreDataUseCaseProtocol {
     let savePositionCoreDataRepository: SavePositionCoreDataRepositoryProtocol = SavePositionCoreDataRepository()
     return SavePositionCoreDataUseCase(repository: savePositionCoreDataRepository)
   }
-  
-  static func getPositionCoreDataUseCase() -> GetPositionCoreDataUseCaseProtocol {
+
+  static func makeGetPositionCoreDataUseCase() -> GetPositionCoreDataUseCaseProtocol {
     let getPositionCoreDataRepository: GetPositionCoreDataRepositoryProtocol = GetPositionCoreDataRepository()
     return GetPositionCoreDataUseCase(repository: getPositionCoreDataRepository)
   }

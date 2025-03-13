@@ -7,30 +7,32 @@
 
 import Combine
 
-// MARK: - protocol
-protocol GetPositionAPIClientUseCaseProtocol {
-  func execute() -> AnyPublisher<ISSPositionDTO, ISSPositionDomainError>
-}
-
-// MARK: - GetPositionAPIClientUseCase
 class GetPositionAPIClientUseCase: GetPositionAPIClientUseCaseProtocol {
-  
+
   // MARK: - Properties
   private let repository: GetPositionAPIClientRepositoryProtocol
-  
+
   // MARK: - init
   init(repository: GetPositionAPIClientRepositoryProtocol) {
     self.repository = repository
   }
-  
+
   // MARK: - Methods
-  func execute() -> AnyPublisher<ISSPositionDTO, ISSPositionDomainError> {
-    let result: AnyPublisher<ISSPositionDTO, ISSPositionDomainError> = repository.getPositionAPIClient()
-        .mapError { _ in
-          return ISSPositionDomainError.generic
-        }
-        .eraseToAnyPublisher()
+  func execute() -> AnyPublisher<ISSPositionModel, ISSPositionDomainError> {
+    let result: AnyPublisher<ISSPositionModel, ISSPositionDomainError> = repository.getPositionAPIClient()
+      .map { value in
+        return ISSPositionMapper.map(dto: value)
+      }
+      .mapError { _ in
+        return ISSPositionDomainError.unknown
+      }
+      .eraseToAnyPublisher()
 
     return result
   }
+}
+
+// MARK: - protocol
+protocol GetPositionAPIClientUseCaseProtocol {
+  func execute() -> AnyPublisher<ISSPositionModel, ISSPositionDomainError>
 }

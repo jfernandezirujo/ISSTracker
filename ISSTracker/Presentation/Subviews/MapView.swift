@@ -10,25 +10,12 @@ import MapKit
 import SwiftUI
 
 struct MapView: View {
-  
+
   // MARK: - Properties
   typealias constants = PresentationConstants
-  
-  private let pinOffset: CGSize = .zero
   @ObservedObject var viewModel: ISSPositionViewModel
   @State private var mapRegion: MKCoordinateRegion?
-  
-  // MARK: - init
-  init(viewModel: ISSPositionViewModel) {
-    self.viewModel = viewModel
-    viewModel.currentPositionSubject
-      .sink(receiveValue: { [self] region in
-        self.mapRegion = region
-      })
-      .store(in: &viewModel.cancellables)
-  }
-  
-  
+
   // MARK: - body
   var body: some View {
     Group {
@@ -36,23 +23,30 @@ struct MapView: View {
         Map(coordinateRegion: .constant(mapRegion))
           .gesture(
             MagnificationGesture()
-              .onChanged { scale in
+              .onEnded { scale in
                 if scale > constants.one {
                   viewModel.zoomOutMap()
                 } else {
                   viewModel.zoomInMap()
                 }
+                viewModel.updateCurrentPosition()
               }
           )
           .cornerRadius(constants.cornerRadius)
           .overlay(
             Image(constants.pin)
               .resizable()
-              .frame(width: constants.pinFrame,
-                     height: constants.pinFrame)
-              .offset(pinOffset)
+              .frame(
+                width: constants.pinFrame,
+                height: constants.pinFrame
+              )
           )
+      } else {
+        ProgressView()
       }
+    }
+    .onAppear {
+      viewModel.updateCurrentPosition()
     }
     .onReceive(viewModel.currentPositionPublisher) { receivedMapRegion in
       self.mapRegion = receivedMapRegion

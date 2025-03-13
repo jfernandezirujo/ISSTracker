@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ISSPositionView: View {
-  
+
   // MARK: - Properties
   typealias constants = PresentationConstants
   @EnvironmentObject private var viewModel: ISSPositionViewModel
-  
+
   //MARK: - Body
   var body: some View {
     NavigationStack {
@@ -23,35 +23,37 @@ struct ISSPositionView: View {
       }
       .padding(.all, constants.padding)
       .onAppear {
+        getPositionFromCoreData()
         refreshPosition()
         startUpdatingPosition()
       }
       .navigationBarTitle(constants.title, displayMode: .inline)
     }
   }
-  
+
   //MARK: - Methods
   private func setButtonsView() -> some View {
-    viewModel.setButtonsView()
+    ButtonsView(viewModel: viewModel)
   }
-  
+
   private func setLabelsView() -> some View {
-    viewModel.setLabelsView()
+    LabelsView(viewModel: viewModel)
   }
-  
+
   private func setMapView() -> some View {
-    viewModel.setMapview()
+    viewModel.updateCurrentPosition()
+    return MapView(viewModel: viewModel)
   }
-  
+
   private func startUpdatingPosition() {
-    DispatchQueue.main.async {
-      viewModel.startUpdatingPosition()
-    }
+    viewModel.startUpdatingPosition()
   }
-  
+
   private func refreshPosition() {
-    DispatchQueue.main.async {
-      viewModel.refreshPosition()
-    }
+    viewModel.refreshPosition()
+  }
+
+  private func getPositionFromCoreData() {
+    viewModel.getPositionFromCoreData()
   }
 }

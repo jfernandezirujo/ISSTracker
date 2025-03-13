@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct LabelsView: View {
-  
+
   // MARK: - Properties
   @ObservedObject var viewModel: ISSPositionViewModel
   typealias constants = PresentationConstants
-  
+  @State private var latitude: String = ""
+  @State private var longitude: String = ""
+
   // MARK: - body
   var body: some View {
     ZStack {
@@ -24,10 +26,12 @@ struct LabelsView: View {
         )
         .frame(height: constants.rectangleFrame)
       VStack(spacing: constants.one) {
-        Text(viewModel.coordinates.latitude)
+        Text(latitude)
         Divider()
-        Text(viewModel.coordinates.longitude)
+        Text(longitude)
       }
     }
+    .onReceive(viewModel.longitudePublisher) { longitude = $0 }
+    .onReceive(viewModel.latitudePublisher) { latitude = $0 }
   }
 }

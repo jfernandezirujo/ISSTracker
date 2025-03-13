@@ -19,14 +19,14 @@ struct PresentationConstants {
   static let refresh: String = "arrow.triangle.2.circlepath"
   static let zoomIn: String = "plus.circle"
   static let zoomOut: String = "minus.circle"
-  static let time: TimeInterval = 1.0
+  static let timeRefresh: TimeInterval = 1.0
   static let buttonFrame: CGFloat = 44
   static let buttonPadding: CGFloat = 8
   static let rectangleFrame: CGFloat = 60
   static let padding: CGFloat = 20
   static let cornerRadius: CGFloat = 12
   static let one: CGFloat = 1
-  static let errorString: String = "Error:"
+  static let timeSplash: TimeInterval = 2.0
   
   // MARK: - Map
   static let zoomLevel: Double = 10.0
@@ -34,6 +34,5 @@ struct PresentationConstants {
   static let minZoomDelta: Double = 2.0
   static let maxZoomDelta: Double = 20.0
   static let pin: String = "iss-pin"
-  static let customPin: String = "CustomPin"
   static let pinFrame: CGFloat = 50
 }
